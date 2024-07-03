@@ -20,6 +20,7 @@ const ProductDetails = () => {
                             </div>
                         </div>
                         <button className='payment-button'>Proceed with Payment</button>
+                        <div>heelo</div>
                     </div>
                 </div>
             </div>
