@@ -5,6 +5,7 @@ import Women from './Women'
 import Kids from './Kids'
 import Products from './Products'
 import SocialMedia from './SocialMedia'
+import { Link } from 'react-router-dom'
 
 
 const Home = (props) => {
@@ -22,7 +23,9 @@ const Home = (props) => {
                                 <h1 className='containt-one'>We Are Hexashop</h1>
                                 <p className='discraption'>Lorem Ipsum is simply dummy text of the printing
                                     and typesetting industry.</p>
-                                <Button text='Purchase Now' className="button" />
+                                <Link to='/' >
+                                    <Button text='Purchase Now' className="button" />
+                                </Link>
                             </div>
                         </div>
                         <div className='cards'>

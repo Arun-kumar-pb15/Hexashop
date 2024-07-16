@@ -34,7 +34,7 @@ function App() {
     },
   ]
 
-  
+
 
 
 
@@ -51,7 +51,7 @@ function App() {
           <Route path="/AboutUs" element={<AboutUs />}> </Route>
           <Route path="/ContactUs" element={<ContactUs />}> </Route>
           <Route path="/ProductDetails" element={<ProductDetails />}> </Route>
-          
+
         </Routes>
         <Footer />
       </BrowserRouter>

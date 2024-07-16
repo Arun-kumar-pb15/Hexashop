@@ -4,6 +4,7 @@ const SocialMedia = () => {
     return (
         <>
             <div className='container'>
+                
                 <div className='SecMain2'>
                     <div className="SecContant2">
                         <h1 className='SocialMedia'>Social Media</h1>

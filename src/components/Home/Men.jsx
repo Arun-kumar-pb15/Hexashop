@@ -1,46 +1,54 @@
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Link } from 'react-router-dom';
+import Cards from '../sinnepts/Cards';
 const Men = () => {
   // Slider Data//
 
   const slidData = [
     {
+      id: 1,
       photo: "picOne.png",
       name: "Classic Spring",
       rank: "stars-group.svg",
       price: "$120.00",
     },
     {
+      id: 2,
       photo: "picTwo.png",
       name: "Classic Spring",
       rank: "stars-group.svg",
       price: "$120.00",
     },
     {
+      id: 3,
       photo: "picThree.png",
       name: "Classic Spring",
       rank: "stars-group.svg",
       price: "$120.00",
     },
     {
+      id: 4,
       photo: "picFour.png",
       name: "Classic Spring",
       rank: "stars-group.svg",
       price: "$120.00",
     },
     {
+      id: 5,
       photo: "picFive.png",
       name: "Classic Spring",
       rank: "stars-group.svg",
       price: "$120.00",
     },
     {
+      id: 6,
       photo: "picSix.png",
       name: "Classic Spring",
       rank: "stars-group.svg",
@@ -65,27 +73,19 @@ const Men = () => {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
                 loop={true}
-                autoplay={true}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false,
+                }}
               >
                 {slidData.map((item, index) => (
-                  <SwiperSlide>
-                    <div key={index} className='ImgContainer'>
-                      <img src={`/imges/${item.photo}`} alt={`${index}${item.photo}`} />
-                      <div className='main-containt-div'>
-                        <div className='ImgContaint'>
-                          <h1 className='ClassicSpring'>{item.name}</h1>
-                          <img src={`/imges/${item.rank}`} alt={`/imges/${item.rank}`} />
-                        </div>
-                        <div className="ImgContaint2">
-                          <p>{item.price}</p>
-                          <div className='ImgAsserts'>
-                            <img src="/imges/hart.svg" alt="hart.svg" />
-                            <img src="/imges/dilver.svg" alt="dilver.svg" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
+                  <Fragment key={`card_${item.id || Date.now() + index}`} >
+                    <SwiperSlide>
+                      <Link to={`/ProductsDetails/${slidData.id}`} className="link-dactration" target='_blank' >
+                        <Cards data={item} />
+                      </Link>
+                    </SwiperSlide>
+                  </Fragment>
                 ))}
               </Swiper>
             </div>

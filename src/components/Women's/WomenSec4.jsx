@@ -2,44 +2,44 @@ import React, { Fragment } from 'react'
 import Cards from '../sinnepts/Cards'
 
 const WomenSec4 = () => {
-    const MensData4 = [
+    const slidData = [
         {
-            id: 1,
+            id: 6001,
             photo: "women13.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 2,
+            id: 6002,
             photo: "women14.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 3,
+            id: 6003,
             photo: "women15.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 4,
+            id: 6004,
             photo: "women16.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 5,
+            id: 6005,
             photo: "women17.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 6,
+            id: 6006,
             photo: "women18.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
@@ -53,7 +53,7 @@ const WomenSec4 = () => {
                 <div className='Sec2-container'>
                     <h1 className='MenSectionContaint'>Casual</h1>
                     <div className='PicBoxs'>
-                        {MensData4.map((item, index) => (
+                        {slidData.map((item, index) => (
                             <Fragment key={`card_${item.id || Date.now() + index}`} >
                                 <Cards data={item} />
                             </Fragment>

@@ -9,44 +9,44 @@ import Cards from '../sinnepts/Cards';
 
 
 const Women = () => {
-    const slidData2 = [
+    const slidData = [
         {
-            id: 1,
+            id: 111,
             photo: "women1.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 2,
+            id: 112,
             photo: "women2.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 3,
+            id: 113,
             photo: "women3.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 4,
+            id: 114,
             photo: "women1.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 5,
+            id: 115,
             photo: "women2.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
             price: "$120.00",
         },
         {
-            id: 6,
+            id: 116,
             photo: "women3.png",
             name: "Classic Spring",
             rank: "stars-group.svg",
@@ -73,9 +73,12 @@ const Women = () => {
                                 onSwiper={(swiper) => console.log(swiper)}
                                 onSlideChange={() => console.log('slide change')}
                                 loop={true}
-                                autoplay={true}
+                                autoplay={{
+                                    delay: 1500,
+                                    disableOnInteraction: false,
+                                 }}
                             >
-                                {slidData2.map((item, index) => (
+                                {slidData.map((item, index) => (
                                     <Fragment key={`card_${item.id || Date.now() + index}`} >
                                         <SwiperSlide>
                                             <Cards data={item} />
