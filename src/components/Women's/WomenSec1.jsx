@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 import Cards from '../sinnepts/Cards'
+import { Link } from 'react-router-dom'
+import { SwiperSlide } from 'swiper/react'
 
 const WomenSec1 = () => {
     const slidData = [
@@ -53,10 +55,12 @@ const WomenSec1 = () => {
                 <div className='Sec1-container'>
                     <h1 className='WomenSectionContaint'>Women’s Latest</h1>
                     <div className='PicBoxs'>
-                        {slidData.map((item, index) => (
-                            <Fragment key={`card_${item.id || Date.now() + index}`} >
-                                <Cards data={item} />
-                            </Fragment>
+                        {slidData.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <Link to={`/ProductsDetails/${item.id}`} className="link-dactration">
+                                    <Cards data={item} />
+                                </Link>
+                            </SwiperSlide>
                         ))}
                     </div>
                 </div>

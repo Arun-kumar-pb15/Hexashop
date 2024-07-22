@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Cards from '../sinnepts/Cards'
+import { Link } from 'react-router-dom';
 
 const Kids = () => {
     const slidData = [
@@ -73,14 +74,14 @@ const Kids = () => {
                                 autoplay={{
                                     delay: 1500,
                                     disableOnInteraction: false,
-                                 }}
+                                }}
                             >
-                                {slidData.map((item, index) => (
-                                    <Fragment key={`card_${item.id || Date.now() + index}`} >
-                                        <SwiperSlide>
+                                {slidData.map((item) => (
+                                    <SwiperSlide key={item.id}>
+                                        <Link to={`/ProductsDetails/${item.id}`} className="link-dactration">
                                             <Cards data={item} />
-                                        </SwiperSlide>
-                                    </Fragment>
+                                        </Link>
+                                    </SwiperSlide>
                                 ))}
                             </Swiper>
                         </div>

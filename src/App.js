@@ -34,11 +34,6 @@ function App() {
     },
   ]
 
-
-
-
-
-
   return (
     <>
       <BrowserRouter>
@@ -50,8 +45,7 @@ function App() {
           <Route path="/KidsSections" element={<KidsSections />}> </Route>
           <Route path="/AboutUs" element={<AboutUs />}> </Route>
           <Route path="/ContactUs" element={<ContactUs />}> </Route>
-          <Route path="/ProductDetails" element={<ProductDetails />}> </Route>
-
+          <Route path="/ProductsDetails/:productId" element={<ProductDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>

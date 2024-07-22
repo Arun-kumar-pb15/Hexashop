@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Cards from '../sinnepts/Cards'
+import { Link } from 'react-router-dom'
 
 const MenSec2 = () => {
     const slidData = [
@@ -45,7 +46,6 @@ const MenSec2 = () => {
             rank: "stars-group.svg",
             price: "$120.00",
         },
-
     ]
     return (
         <>
@@ -53,9 +53,11 @@ const MenSec2 = () => {
                 <div className='Sec2-container'>
                     <h1 className='MenSectionContaint'>Featured</h1>
                     <div className='PicBoxs'>
-                        {slidData.map((item, index) => (
-                            <Fragment key={`card_${item.id || Date.now() + index}`} >
-                                <Cards data={item} />
+                        {slidData.map((item) => (
+                            <Fragment key={item.id}>
+                                <Link to={`/ProductsDetails/${item.id}`} className="link-dactration">
+                                    <Cards data={item} />
+                                </Link>
                             </Fragment>
                         ))}
                     </div>
